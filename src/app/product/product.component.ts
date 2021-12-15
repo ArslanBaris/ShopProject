@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from './product';
 
 @Component({
   selector: 'app-product',
@@ -8,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
   constructor() {}
   title = 'Ürün Listesi';
-  products: any[] = [  
-    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook' },
-    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' },
-    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook' },
-    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' },
-    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook' },
-    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' },
-    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook' },
-    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' }
+  products: Product[] = [  
+    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
+    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
+    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"  },
+    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' ,imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
+    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"  },
+    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' ,imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
+    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"  },
+    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' ,imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" }
 ];
 
   ngOnInit(): void {}
