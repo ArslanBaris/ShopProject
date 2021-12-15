@@ -8,16 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
   constructor() {}
   title = 'Ürün Listesi';
-  products: any[] = [
-    {
-      id: 1,
-      name: 'Laptop',
-      price: 2500,
-      categoryId: 1,
-      description: 'Asus ZenBook',
-    },
-    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' },
-  ];
+  products: any[] = [  
+    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook' },
+    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' }
+];
 
   ngOnInit(): void {}
 }
