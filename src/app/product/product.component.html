@@ -18,6 +18,7 @@
       Bu kategoride ürün yoktur
     </div>
   </ng-template>
+
   <div
     *ngFor="let product of products | productFilter: filterText"
     class="card"
@@ -29,7 +30,7 @@
         {{ product.name }} {{ product.price | currency: "USD":true:"1.2-2" }}
       </h5>
       <p class="card-text">{{ product.description }}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a (click)="addToCard(product)" class="btn btn-primary">Sepete Ekle</a>
     </div>
   </div>
 </div>

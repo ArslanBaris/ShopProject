@@ -22,4 +22,8 @@ export class ProductComponent implements OnInit {
 ];
 
   ngOnInit(): void {}
+
+  addToCard(product:Product){
+    alert("Sepete Eklendi : "+product.name)
+  }
 }
