@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
 
+declare let alertify : any;
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -24,6 +26,6 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {}
 
   addToCard(product:Product){
-    alert("Sepete Eklendi : "+product.name)
+    alertify.success(product.name + " added.")
   }
 }
