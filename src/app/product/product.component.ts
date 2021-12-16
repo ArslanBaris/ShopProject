@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
-
-declare let alertify : any;
+import { AlertifyService } from '../services/alertify.service';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +8,7 @@ declare let alertify : any;
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-  constructor() {}
+  constructor(private alertifyService:AlertifyService) {}
   title = 'Ürün Listesi';
   filterText = ""
   products: Product[] = [  
@@ -26,6 +25,6 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {}
 
   addToCard(product:Product){
-    alertify.success(product.name + " added.")
+    this.alertifyService.success(product.name + " added.")
   }
 }

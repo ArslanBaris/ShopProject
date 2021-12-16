@@ -1,3 +1,4 @@
+import { AlertifyService } from './services/alertify.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +23,7 @@ import { ProductFilterPipe } from './product/product-filter.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
