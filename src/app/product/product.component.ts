@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
 import { AlertifyService } from '../services/alertify.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-product',
@@ -8,21 +9,17 @@ import { AlertifyService } from '../services/alertify.service';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-  constructor(private alertifyService:AlertifyService) {}
+  constructor(private alertifyService:AlertifyService, private http : HttpClient) {}
   title = 'Ürün Listesi';
   filterText = ""
-  products: Product[] = [  
-    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
-    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
-    { id: 1, name: 'Bilgisayar', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"  },
-    { id: 2, name: 'Kulaklık', price: 120, categoryId: 2, description: 'A4 Tech' ,imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
-    { id: 1, name: 'Monitör', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"  },
-    { id: 2, name: 'Mouse', price: 120, categoryId: 2, description: 'A4 Tech' ,imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" },
-    { id: 1, name: 'Laptop', price: 2500, categoryId: 1, description: 'Asus ZenBook',imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"  },
-    { id: 2, name: 'Kulaklık', price: 120, categoryId: 2, description: 'A4 Tech' ,imageUrl:"https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg" }
-];
+  products!: Product[];
+  path = "http://localhost:3000/products";
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.http.get<Product[]>(this.path).subscribe(data=> {
+      this.products = data;
+    });
+  }
 
   addToCard(product:Product){
     this.alertifyService.success(product.name + " added.")
