@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path:'product-add-1',component:ProductAddForms1Component},
   {path:'product-add-2',component:ProductAddForms2Component},
   {path:'',redirectTo:'products',pathMatch:'full'},
-  {path:'products/category/:categoryId',component:ProductComponent}
+  {path:'products/category/:categoryId',component:ProductComponent},
+  {path:'login',component:LoginComponent}
 ];
 
 @NgModule({
