@@ -1,0 +1,118 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 2500,
+      "categoryId": 2,
+      "description": "Asus ZenBook",
+      "imageUrl": "https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 120,
+      "categoryId": 2,
+      "description": "A4 Tech",
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/logitech/thumb/TeoriV2-104450_large.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Bilgisayar",
+      "price": 2500,
+      "categoryId": 2,
+      "description": "Asus ZenBook",
+      "imageUrl": "https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Kulaklık",
+      "price": 120,
+      "categoryId": 4,
+      "description": "Philips",
+      "imageUrl": "https://cdn.cimri.io/image/1000x1000/philipstahbtkablosuzmavikulakstkulaklk_444099072.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Monitör",
+      "price": 2500,
+      "categoryId": 1,
+      "description": "Asus ZenBook",
+      "imageUrl": "https://images.philips.com/is/image/PhilipsConsumer/346B1C_00-IMS-tr_TR?$jpglarge$&wid=960"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 120,
+      "categoryId": 2,
+      "description": "A4 Tech",
+      "imageUrl": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/logitech/thumb/TeoriV2-104450_large.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 2500,
+      "categoryId": 2,
+      "description": "Asus ZenBook",
+      "imageUrl": "https://cdn.cimri.io/image/1000x1000/apple-macbook-air-mgne3tu-a-m1-8gb-ram-512gb-ssd-macos-13-inc-altin-laptop-notebook_301029058.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Kulaklık",
+      "price": 120,
+      "categoryId": 4,
+      "description": "A4 Tech",
+      "imageUrl": "https://cdn.cimri.io/image/1000x1000/philipstahbtkablosuzmavikulakstkulaklk_444099072.jpg"
+    },
+    {
+      "name": "Telefon",
+      "description": "IPhone 8 ",
+      "imageUrl": "https://productimages.hepsiburada.net/s/31/1500/10352775561266.jpg",
+      "price": "8500",
+      "categoryId": "3",
+      "id": 3
+    },
+    {
+      "name": "Buzdolabı",
+      "description": "Arçelik No-Frost",
+      "price": "7300",
+      "categoryId": "1",
+      "imageUrl": "https://www.gizerler.com/assets/product-images/127000/arcelik-270561-egc-514-lt-d-enerji-kombi-no-frost-gri-buzdolabi_47397.jpg",
+      "id": 4
+    },
+    {
+      "name": "Arçelik",
+      "description": "Arçelik 274580 EDI ",
+      "price": "9500",
+      "categoryId": "1",
+      "imageUrl": "https://www.enpazar.com/UserFiles/ProductImages/0/7282120192/orj/arcelik-274580-edi-74-cm-dark-inoks-no-frost-buzdolabi-71346.jpg",
+      "id": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Elektronik"
+    },
+    {
+      "id": 2,
+      "name": "Bilgisayar"
+    },
+    {
+      "id": 3,
+      "name": "Telefon"
+    },
+    {
+      "id": 4,
+      "name": "Müzik"
+    },
+    {
+      "id": 5,
+      "name": "Giyim"
+    },
+    {
+      "id": 6,
+      "name": "İçecek"
+    }
+  ]
+}
