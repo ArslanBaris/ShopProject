@@ -3,26 +3,25 @@ import { User } from '../login/user';
 
 @Injectable()
 export class AccountService {
-
-  constructor() { }
+  constructor() {}
 
   loggedIn = false;
 
-  login(user: User):boolean{
-    if(user.userName=="Baris" && user.password=="1234"){
+  login(user: User): boolean {
+    if (user.userName == 'baris' && user.password == '1234') {
+      this.loggedIn = true;
+      localStorage.setItem('isLogged', user.userName);
       return true;
-      this.loggedIn=true;
-      localStorage.setItem("isLogged",user.userName);
     }
     return false;
   }
 
-  isLoggedIn(){
+  isLoggedIn() {
     return this.loggedIn;
   }
 
-  logOut(){
-    localStorage.removeItem("isLogged");
-    this.loggedIn=false;
+  logOut() {
+    localStorage.removeItem('isLogged');
+    this.loggedIn = false;
   }
 }
