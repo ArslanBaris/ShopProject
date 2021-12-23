@@ -1,3 +1,4 @@
+import { LoginGuard } from './login/login.guard';
 import { AccountService } from './services/account.service';
 import { AlertifyService } from './services/alertify.service';
 import { NgModule } from '@angular/core';
@@ -27,7 +28,7 @@ import { LoginComponent } from './login/login.component';
     LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,ReactiveFormsModule],
-  providers: [AlertifyService,AccountService],
+  providers: [AlertifyService,AccountService,LoginGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
